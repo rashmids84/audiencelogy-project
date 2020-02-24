@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import logo from './img15.png';
-import './App.css';
+// import './App.css';
 import {Button, Form} from 'react-bootstrap';
 import Request from 'superagent';
 import _ from "lodash";

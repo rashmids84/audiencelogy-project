@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer class="footer">
             <div>
-                <dsspan>© 2020 AUDIENCELOGY. All RIGHTS RESERVED. </dsspan>
+                <span>© 2020 AUDIENCELOGY. All RIGHTS RESERVED. </span>
             </div>
         </footer>
 

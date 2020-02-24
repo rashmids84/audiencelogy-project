@@ -1,20 +1,14 @@
 import React from 'react';
-import Navbar from '../component/Navbar';
+import Navbar from './Navbar';
 import Login from './login';
-import Footer from '../component/Footer';
-
+import Footer from './Footer';
+import "./Login.scss";
 const AdminHome = () => {
       return<div>
-            <div> 
-         <Navbar />
-         </div> 
-         <div>
-         <Login />
-         </div> 
-         <div>
-         <Footer />
-         </div> 
-         </div>
+              <Navbar />
+              <Login />
+              <Footer /> 
+            </div>
         
     } ;
   export default AdminHome;   

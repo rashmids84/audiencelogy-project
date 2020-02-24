@@ -5,6 +5,7 @@ import { ControlLabel } from 'react-bootstrap';
 import logo from './img15.png';
 import './Login.scss';
 import md5 from 'md5';
+import Footer from './Footer';
 
 //  First page admin authentication
 
@@ -123,62 +124,62 @@ handleUserChange(evt) {
     render() {
 
         return ( 
-          <div>
-           <div className="content content-fixed">
-  {/* <div className="container pd-x-0 pd-lg-x-10 pd-xl-x-0"> */}
-  
-          <div className="row">
-            <div className="column">
-              <img src={logo} className="App-logo" alt="img" />
-            </div>
-            
-            <div className="column">
-             
-             <div className="container">
+      
+        <div className="content content-fixed content-auth">
+        <div className="container">
+            <div className="media align-items-stretch justify-content-center ht-100p pos-relative">
+                <div className="media-body align-items-center d-none d-lg-flex">
+                    <div className="mx-wd-600">
+                        <img src={logo} className="img-fluid" alt=""/>
+                    </div>
+                </div>
+                {/* -- media-body - */}
+                <div className="sign-wrapper mg-lg-l-50 mg-xl-l-60">
+                    <div className="wd-100p">
+                        <h3 className="tx-color-01 mg-b-5">Admin Console</h3>
+                        <p className="tx-color-03 tx-16 mg-b-40">Welcome back! Please signin to continue.</p>
+                        {/* <div id="divMessage" className="alert alert-solid alert-danger" role="alert" style={{display:"none"}}></div> */}
+                        <div className="Login">
+                       <form onSubmit={this.submitHandler} method="post" action="" role="form" className="align-left">
           
-          <div className="Login">
-          <form onSubmit={this.submitHandler} method="post" action="" role="form" className="align-left">
-          
-          {this.state.error && (
+                      {this.state.error && (
                     
-                    <h5 data-test="error" onClick={this.dismissError}>
+                     <h5 data-test="error" onClick={this.dismissError}>
                   
-                      {this.state.error}
+                     {this.state.error}
                     </h5>
-                  )}
-              <div class="text-left"> 
-              
-              <Form.Group controlId="formBasicEmail">
-
-              <label for="exampleInputEmail1">Email address</label>
-             <input type="text" className="form-control" id="exampleInputEmail1" value={this.state.username} onChange={this.handleUserChange}/>                  
-
-                  
-              </Form.Group>
-              </div>
-              <div class="text-left"> 
-              <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" value={this.state.password} onChange={this.handlePassChange}/>
-                    
-              </Form.Group>
-              </div>
-              <div class="text-left"> 
-              <Form.Group controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Remember me" />
-              </Form.Group>
-              </div>
-              <div class="text-left"> 
-              
-              <Button className="btn-lg btn-block"   type="submit"value="Log In" data-test="submit" > Sign In </Button> 
-              </div>
-            </form>
+                     )}
+                        <div className="form-group">
+                            <label>Username</label>
+                            <input name="username" type="text" id="username" className="form-control" placeholder="username" value={this.state.username} onChange={this.handleUserChange}/>
+                        </div>
+                        <div className="form-group">
+                            <div className="d-flex justify-content-between mg-b-5">
+                                <label className="mg-b-0-f">Password</label>
+                            </div>
+                            <input name="password" type="password" id="password" className="form-control" placeholder="Enter your password" value={this.state.password} onChange={this.handlePassChange}/>
+                        </div>
+                         <div className="form-group">
+                        <div className="custom-control custom-checkbox">
+                          <input name="remembercheckbox" type="checkbox" id="remembercheckbox" className="custom-control-input" />
+                          <label className="custom-control-label" for="remembercheckbox">Remember me</label>
+                        </div>
+                             </div>
+                        <button className="btn-brand-02 btn-block" type="submit"  value="Log In" data-test="submit">Sign In</button>
+                  </form>
+                </div>
+                {/* -- sign-wrapper - */}
             </div>
+            {/* -- media -- */}
         </div>
-        </div>
-         </div>  
-         </div>     
-</div>
+        {/* -- container - */}
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
          );
     }
 

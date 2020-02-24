@@ -1,17 +1,18 @@
 import React , {Component} from 'react';
 import { Link } from 'react-router-dom';
+// import "../styles/panels/header.scss";
+// import "../styles/panels/logo.scss";
 
 function Navbar() {
     return (
-    
-<div className= "App">
-
-      <nav class="navbar sticky-top navbar-custom"> 
-    <a class="navbar-brand tx-bold tx-spacing--2" href="#"><font color="white"><b>audience</b></font><font color="#0168fa">logy</font></a>
-</nav>
-
-</div>
-
+    <React.Fragment>
+    <nav className="navbar navbar-header navbar-header-fixed">
+       
+        <div className="navbar-brand">
+            <a href="index" className="df-logo">audience<span>logy</span></a>
+        </div>
+    </nav>
+    </React.Fragment>
 )
 }
 export default Navbar;
